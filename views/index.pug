@@ -2,38 +2,39 @@ extends layout
 
 block content
  h1 Books
-  .bookAddSearch
-    p.addBook
-      a.button(href="/books/new-book" class="addBookBtn") Add Book
-    p
-      form.search(action="/books")
-        input.searchBar(type='search' name='search' placeholder='Search...')
-        button.searchBtn Search
+  .wrapper
+    .bookAddSearch
+      p.addBook
+        a.button(href="/books/new-book" class="addBookBtn") Add Book
+      p
+        form.search(action="/books")
+          input.searchBar(type='search' name='search' placeholder='Search...')
+          button.searchBtn Search
 
-  table   
-    thead 
-      tr 
-        th Title 
-        th Author 
-        th Genre 
-        th Year 
+    table   
+      thead 
+        tr 
+          th Title 
+          th Author 
+          th Genre 
+          th Year 
 
-    tbody
-    each book in books
-      tr 
-        td 
-          a(href='/books/' + book.id)= book.title 
-        td= book.author
-        td= book.genre 
-        td= book.year
-
+      tbody
+      each book in books
+        tr 
+          td 
+            a.bookTitle(href='/books/' + book.id)= book.title 
+          td= book.author
+          td= book.genre 
+          td= book.year
 
 
    
-    - var n = 1;
-    ul
-      p.paginateText Pages
-      while n <= pages
-        li.paginateList
-          a.paginateBtn(href=`?page=${n}`)= n++
+      .paginateCtn
+        - var n = 1;
+        ul
+          p.paginateText Pages
+          while n <= pages
+            li.paginateList
+              a.paginateBtn(href=`?page=${n}`)= n++
 

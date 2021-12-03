@@ -26,11 +26,17 @@ a {
   letter-spacing: 0.5px;
 }
 
+.wrapper {
+  width: 80%;
+}
+
 .addBook {
   margin-top: 20px;
 }
+
 .search {
   align-self: flex-start;
+  margin-left: 40%;
 }
 
 .searchBtn {
@@ -41,6 +47,7 @@ a {
   width: 50px;
   height: 30px;
   font-size: 10px;
+  transition: 0.4s ease-out;
 }
 
 .searchBar {
@@ -53,6 +60,15 @@ a {
 .searchHide {
   display: none;
 }
+
+.bookAddSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .addBookBtn {
   width: 200px;
   height: 50px;
@@ -62,11 +78,13 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: 0.4s ease-out;
 }
 
-.paginate {
+.paginateCtn {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-left: 10px;
   align-content: center;
 }
 
@@ -75,9 +93,14 @@ ul {
   justify-content: flex-end;
   align-content: center;
   list-style-type: none;
-  margin-top: -50px;
+  margin-top: -70px;
+  margin-bottom: 20px;
   padding-top: 0;
-  padding-right: 250px;
+  padding-right: 5%;
+}
+
+li {
+  justify-self: flex-end;
 }
 
 .paginateText {
@@ -97,7 +120,9 @@ ul {
 }
 
 .paginateBtn:active,
-.paginateBtn:hover {
+.paginateBtn:hover,
+.bookTitle:active,
+.bookTitle:hover {
   cursor: pointer;
   color: #e76f51;
 }
@@ -137,11 +162,12 @@ td {
   font-weight: 400;
 }
 
-td a {
+.bookTitle {
   text-decoration: none;
   color: #2a9d8f;
   font-weight: 700;
   letter-spacing: 0.5px;
+  transition: 0.4s ease-out;
 }
 
 .newBook {
@@ -211,6 +237,10 @@ input:focus {
   font-size: 14px;
 }
 
+.searchBtn:active,
+.searchBtn:hover,
+.addBookBtn:active,
+.addBookBtn:hover,
 #createBtn:active,
 #createBtn:hover,
 .cancelBtn:active,
@@ -250,10 +280,31 @@ input:focus {
   text-decoration: underline;
 }
 
-.bookAddSearch {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 0;
-  margin-bottom: 0;
+/*******   Media Queries */
+
+@media (max-width: 1200px) {
+  .bookAddSearch {
+    flex-direction: column;
+    gap: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .addBook {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .search {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    margin-top: -70px;
+  }
+
+  .paginateCtn {
+    align-items: flex-end;
+    padding-left: 0;
+  }
 }
