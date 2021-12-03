@@ -88,7 +88,7 @@ a {
   align-content: center;
 }
 
-ul {
+.paginateUl {
   display: flex;
   justify-content: flex-end;
   align-content: center;

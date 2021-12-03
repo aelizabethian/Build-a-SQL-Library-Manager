@@ -100,10 +100,6 @@ router.get(
   })
 );
 
-// /*Assignment for first part to log books and render the json-originally include in the home get.
-// res.json(books);
-// console.log(books);
-
 /* Create a new book . */
 router.get("/new-book", (req, res) => {
   res.render("new-book", { book: {}, title: "New book" });
