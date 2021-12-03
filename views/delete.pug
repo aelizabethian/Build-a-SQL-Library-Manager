@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .container2
+        h2= `Do you really want to delete "${book.title}"?`
+        h3.deletionWarning= "Deletion cannot be undone!"
+  
+        form(method= "post")
+            input#deleteBtn(type="submit" value="Delete")  
+        p
+            button.cancelBtn
+                a(href='/books') Cancel    
+    
+
+

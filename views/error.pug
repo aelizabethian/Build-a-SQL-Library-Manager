@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h2= "I'm sorry but there was an unexpected error in your request"
+  h3= `Error: ${err.status}`
+  pre #{err.stack}
