@@ -20,7 +20,7 @@ block content
                     label(for='year') Year
                     input#year(name='year' type='text' value= book.year)
                 p
-                    input#createBtn(type='submit' value='Create New Book')
-                p
-                    button.cancelBtn
-                        a(href='/books' immediate="true") Cancel
+                    input#createBtn(type='submit' value='Create New Book')        
+                
+                p.cancelBtnDiv
+                    a.button(href="/books" immediate="true" class="cancelBtn") Cancel

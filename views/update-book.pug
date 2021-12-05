@@ -18,10 +18,11 @@ block content
                 input#year(name='year' type='text' value= book.year)
             p
                 input#createBtn(type='submit' value='Update Book')
-        
+
+            p.cancelBtnDiv
+                    a.button(href="/books" immediate="true" class="cancelBtn") Cancel
+    
             p
-                button.cancelBtn
-                    a(href='/books' immediate="true") Cancel
-            p
-                button.cancelBtn
-                    a(href="/books/"+book.id+"/delete") Delete
+                a(href="/books/"+book.id+"/delete" immediate="true" class="cancelBtn button") Delete
+
+            

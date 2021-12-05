@@ -235,9 +235,24 @@ input:focus {
 #deleteBtn {
   background-color: red;
 }
-.cancelBtn a {
-  font-size: 14px;
+
+.cancelBtnDiv {
+  text-align: center;
 }
+
+.cancelBtn {
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+}
+
+/* .cancelBtn a {
+  font-size: 14px;
+  margin: 0 auto;
+  line-height: 40px;
+  align-self: center; */
+
+/* transform: translateY(-50%); */
 
 .searchBtn:active,
 .searchBtn:hover,

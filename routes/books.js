@@ -101,13 +101,13 @@ router.get(
 );
 
 /* Create a new book . */
-router.get("/new-book", (req, res) => {
+router.get("/new", (req, res) => {
   res.render("new-book", { book: {}, title: "New book" });
 });
 
 /* POST new book added and redirects back to main book list (new books are appended at the end) */
 router.post(
-  "/new-book",
+  "/new",
   asyncHandler(async (req, res) => {
     let book;
     try {

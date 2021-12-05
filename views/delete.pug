@@ -6,10 +6,10 @@ block content
         h3.deletionWarning= "Deletion cannot be undone!"
   
         form(method= "post")
-            input#deleteBtn(type="submit" value="Delete")  
-        p
-            button.cancelBtn
-                a(href='/books') Cancel    
+            input#deleteBtn(type="submit" value="Delete") 
+             
+        p.cancelBtnDiv
+                    a.button(href="/books" immediate="true" class="cancelBtn") Cancel  
     
 
 
